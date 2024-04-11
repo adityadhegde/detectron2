@@ -306,7 +306,7 @@ class DefaultBatchPredictor:
         """
         with torch.no_grad():  # https://github.com/sphinx-doc/sphinx/issues/4258
             inputs = list()
-            for image in batch:
+            for original_image in batch:
                 # Apply pre-processing to image.
                 if self.input_format == "RGB":
                     # whether the model expects BGR inputs or RGB
